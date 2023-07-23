@@ -1,0 +1,28 @@
+<h2>HandyHandy</h2>
+
+<button id="shortcut-group">Group</button>
+<button id="shortcut-ungroup">Ungroup</button>
+<button id="shortcut-convert">Frame it!</button>
+<button id="shortcut-autolayout">Autolayout</button>
+<button id="shortcut-converter">Group <> Frame</button>
+
+
+<script>
+
+document.getElementById('shortcut-group').onclick = () => {
+  parent.postMessage({ pluginMessage: { type: 'shortcut-group' } }, '*')
+}
+
+document.getElementById('shortcut-ungroup').onclick = () => {
+  parent.postMessage({ pluginMessage: { type: 'shortcut-ungroup' } }, '*')
+}
+
+document.getElementById('shortcut-convert').onclick = () => {
+  parent.postMessage({ pluginMessage: { type: 'shortcut-convert' } }, '*')
+}
+
+document.getElementById('shortcut-autolayout').onclick = () => {
+  parent.postMessage({ pluginMessage: { type: 'shortcut-autolayout' } }, '*')
+}
+
+</script>
